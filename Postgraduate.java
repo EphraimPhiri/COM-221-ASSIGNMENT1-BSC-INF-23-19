@@ -25,6 +25,10 @@ public class Postgraduate extends StudentLoanAccount{
     public double getResearchGrantLoan(){
         return researchGrantLoan;
     }
+    public void applyForSubsistenceLoan(double amount) {
+        double this.amount= amount;
+        super.applyForSubsistenceLoan(amount, .15);
+    }
     // public String toString(){
     //     return "Account name "+ getName() + "\tprogram name" + getProgramEnrolled() + "\tAccount Number PG" + getAccNumber() + "\n";
     // }
