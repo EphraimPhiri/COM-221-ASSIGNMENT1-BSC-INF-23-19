@@ -4,6 +4,8 @@ public class StudentLoanManagementSystem{
     public static void main(String [] args){
 
         Scanner input = new Scanner(System.in);
+        ArrayList<Postgraduate> postArray = new ArrayList<>();
+        ArrayList<Undergraduate> postArray = new ArrayList<>();
 
         home();
         System.out.println("\nENTER YOUR CHOICE:");

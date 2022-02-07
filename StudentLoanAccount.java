@@ -66,7 +66,7 @@ public class StudentLoanAccount{
     }
     public double AnnualCompoundInterest(double amount, double rate) {
         int time =  this.programDuration - this.currentYear;
-        double A = amount * ( Math.pow(1 + rate, time ));
+        double A = amount * (Math.pow((1 + rate), time ));
         return A;
     }
 }
