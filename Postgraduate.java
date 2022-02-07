@@ -3,11 +3,11 @@ public class Postgraduate extends StudentLoanAccount{
     private double researchGrantLoan;
     Scanner input = new Scanner(System.in);
 
-    Postgraduate(){
+    // Postgraduate(){
 
-    }
+    // }
     Postgraduate(String name,String programEnrolled,int currentYear){
-        super(name,ProgramEnrolled,CurrentYear,0.15,3,"PG");//prepend for postgraduate is PG, subsistence loan interest is 15% and duration is 3 years
+        super( name, programEnrolled, currentYear, 0.15, 3, "PG");//prepend for postgraduate is PG, subsistence loan interest is 15% and duration is 3 years
     }
     public void applyResearchGrantLoan(double researchGrantLoan){
         //loop to ensure that user enters a value within the range

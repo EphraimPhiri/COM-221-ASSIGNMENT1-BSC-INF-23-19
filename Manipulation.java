@@ -35,7 +35,7 @@ class Manipulation {
         }
         LoanMenu(Student);
     }
-    public static void ApplyLoan(Loan Student) {
+    public static void ApplyLoan(StudentLoanAccount Student) {
         System.out.println();
         //determines weither the account is undergraduate(true) or postgraduate (false)
         boolean isUndergraduate = (Student instanceof Undergraduate);
@@ -65,7 +65,7 @@ class Manipulation {
                 //option for postgraduate is research grant
                 else{ 
                     System.out.print("Enter research grant amount(MWK): ");
-                    ((Postgraduate)Student).applyForResearchGrantLoan(input.nextDouble());
+                    ((Postgraduate)Student).applyResearchGrantLoan(input.nextDouble());
                 }
                 break;
             case 00: LoanMenu(Student);
@@ -75,7 +75,7 @@ class Manipulation {
         }
       LoanMenu(Student);
     }
-    public static void PayBackLoan(Loan Student) {
+    public static void PayBackLoan(StudentLoanAccount Student) {
         System.out.println();
         //Determines weither the account is undergraduate(true) or postgraduate (false)
         boolean isUndergraduate = (Student instanceof Undergraduate);

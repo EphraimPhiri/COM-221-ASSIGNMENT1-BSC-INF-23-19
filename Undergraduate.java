@@ -1,16 +1,16 @@
 public class Undergraduate extends StudentLoanAccount{
-    private double stationeryLoan;
+    private double stationaryLoan;
     private double stationaryLoanInterest; 
     private final double stationaryInterestRate = 0.15;
-    Undergraduate(){
+    // Undergraduate(){
 
-    }
+    // }
     Undergraduate(String name,String programEnrolled, int currentYear){
-        super(name, program, currentYear, 4, 0.11, "UG");// The duration for under graduate is 4 years and subsistence rate is 11%
+        super(name, programEnrolled, currentYear, 0.11, 4, "UG");// The duration for under graduate is 4 years and subsistence rate is 11%
     }
     //applying for stationary loan
     public void applyForStationaryLoan(double stationaryAmount){
-        double payBackAmount = calculateCompoundtInterest(stationaryAmount, this.stationaryInterestRate);
+        double payBackAmount =  AnnualCompoundInterest(stationaryAmount, this.stationaryInterestRate);
         this.stationaryLoan += payBackAmount;
         this.stationaryLoanInterest += payBackAmount - stationaryAmount; 
         System.out.println("____Stationary Loan granted____");
@@ -47,17 +47,17 @@ public class Undergraduate extends StudentLoanAccount{
         return this.stationaryLoan;
     }
     @Override
-    public void getAllLoansAccessed() {
+    public void getAllLoans() {
         //When user has no loan 
         if(super.getTuitionLoan() ==0 && super.getSubsistenceLoan() ==0 && this.stationaryLoan ==0 ){
             System.out.println("\n___You don't have any Loan right now___ ");
             return; //terminates the method
         }
-        super.getAllLoansAccessed();
+        super.getAllLoans();
         System.out.printf("\nStationary  \t\t %12.2f \t\t %9.2f \n", this.stationaryLoan, this.stationaryLoanInterest);
     }
     @Override
-    public double getTotalLoan() {
-        return super.getTotalLoan() + this.stationaryLoan;
+    public double getTotalLoans() {
+        return super.getTotalLoans() + this.stationaryLoan;
     }
 }

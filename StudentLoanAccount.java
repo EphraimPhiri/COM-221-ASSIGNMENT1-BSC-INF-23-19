@@ -14,9 +14,9 @@ public class StudentLoanAccount{
     private String accountNumber;
     public final double subsistenceInterestRate;
 
-    StudentLoanAccount(){
+    // StudentLoanAccount(){
 
-    }
+    // }
     public StudentLoanAccount(String name,String programEnrolled, int currentYear, double subsistenceInterestRate, int programDuration, String accountNumberCode){
         this.name = name;
         this.programEnrolled = programEnrolled;
@@ -127,7 +127,7 @@ public class StudentLoanAccount{
             }
             //When User has no Tuition Loan
             this.tuition = 0;
-            this.TuitionLoanInterest = 0; //sets interest to zero when the loan is fully repaid
+            this.tuitionInterest = 0; //sets interest to zero when the loan is fully repaid
         }
         //message when the amount paid does not fully repay the loan 
         else{ 
