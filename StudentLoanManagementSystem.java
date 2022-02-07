@@ -1,9 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class StudentLoanManagementSystem{
+    static Scanner input = new Scanner(System.in);
     public static void main(String [] args){
-
-        Scanner input = new Scanner(System.in);
         ArrayList<Postgraduate> postArray = new ArrayList<>();
         ArrayList<Undergraduate> postArray = new ArrayList<>();
 

@@ -13,7 +13,7 @@ public class Undergraduate extends StudentLoanAccount{
         double payBackAmount = calculateCompoundtInterest(stationaryAmount, this.stationaryInterestRate);
         this.stationaryLoan += payBackAmount;
         this.stationaryLoanInterest += payBackAmount - stationaryAmount; 
-        System.out.println("....Stationary Loan granted....");
+        System.out.println("____Stationary Loan granted____");
     }
     //Repaying stationary Loan
     public void payBackStationaryLoan(double amount){
@@ -43,11 +43,14 @@ public class Undergraduate extends StudentLoanAccount{
             this.stationaryLoan -= amount;
         } 
     }
+     public double getStationaryLoan(){
+        return this.stationaryLoan;
+    }
     @Override
     public void getAllLoansAccessed() {
         //When user has no loan 
         if(super.getTuitionLoan() ==0 && super.getSubsistenceLoan() ==0 && this.stationaryLoan ==0 ){
-            System.out.println("\n___You don't have any Loan so far___ ");
+            System.out.println("\n___You don't have any Loan right now___ ");
             return; //terminates the method
         }
         super.getAllLoansAccessed();
